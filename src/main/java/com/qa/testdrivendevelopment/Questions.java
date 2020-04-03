@@ -99,34 +99,18 @@ public class Questions {
 		String[] newArray = stringArray;
 		//int[] arrayIndex = {};
 		
-		List<Integer> intList = new ArrayList<>();
 		
 		
 		if (stringArray.length > 1) {
 			for (int i = 0; i < stringArray.length ; i++) {
 				
 				for(int j = i; j < stringArray.length - 1; j++) {
-					if(i == j) {
-						j++;
-					}
-					if (stringArray[i].matches((stringArray[j]))) {
-						intList.add(j);
-					}
-					else {
-					}
+					
+					
 				}
 			}
 		}
 		
-		
-		if(!intList.isEmpty()) {
-			for(int a = 0; a < stringArray.length - 1 ;a++) {
-				if(a == intList.get(intList.size())) {
-					continue;
-				}
-				newArray[a] = stringArray[a];
-			}
-		}
 
 		return newArray;
 	}
