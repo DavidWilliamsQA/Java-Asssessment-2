@@ -136,16 +136,14 @@ public class Questions {
 		String[] splitUp = csvInput.split("\n");
 		String[] test1 = splitUp.toString().split(",");
 		
-		System.out.println(splitUp);
-		
 		//System.out.println(test1);
 		
 		//for(String test2: test1) {
 		//	System.out.println(test2);
 		//}
-		//for(String test : splitUp) {
-		//	System.out.println(test);
-		//}
+//		for(String test : splitUp) {
+//			System.out.println(test);
+//		}
 		return null;
 	}
 
