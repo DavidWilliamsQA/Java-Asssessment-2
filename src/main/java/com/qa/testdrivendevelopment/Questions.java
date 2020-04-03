@@ -96,21 +96,39 @@ public class Questions {
 	 * removeDuplicates({"Dog","DoG","Cat"}) → {"Dog","DoG","Cat"} 
 	 */
 	public String[] removeDuplicates(String[] stringArray) {
-//		String[] newArray.;
-//		
-//		for (int i = 0; i < stringArray.length ; i++) {
-//			for(int j = 0; j < stringArray.length; j++) {
-//				if (stringArray[i].equals(stringArray[j])) {
-//					continue;
-//				}
-//				else {
-//					newArray[i] = 
-//				}
-//			}
-//		}
-//		
+		String[] newArray = stringArray;
+		//int[] arrayIndex = {};
 		
-		return null;
+		List<Integer> intList = new ArrayList<>();
+		
+		
+		if (stringArray.length > 1) {
+			for (int i = 0; i < stringArray.length ; i++) {
+				
+				for(int j = i; j < stringArray.length - 1; j++) {
+					if(i == j) {
+						j++;
+					}
+					if (stringArray[i].matches((stringArray[j]))) {
+						intList.add(j);
+					}
+					else {
+					}
+				}
+			}
+		}
+		
+		
+		if(!intList.isEmpty()) {
+			for(int a = 0; a < stringArray.length - 1 ;a++) {
+				if(a == intList.get(intList.size())) {
+					continue;
+				}
+				newArray[a] = stringArray[a];
+			}
+		}
+
+		return newArray;
 	}
 
 	/**
@@ -134,14 +152,14 @@ public class Questions {
 		String[] splitUp = csvInput.split("\n");
 		String[] test1 = splitUp.toString().split(",");
 		
-		System.out.println(test1);
+		//System.out.println(test1);
 		
-		for(String test2: test1) {
-			System.out.println(test2);
-		}
-		for(String test : splitUp) {
-			System.out.println(test);
-		}
+		//for(String test2: test1) {
+		//	System.out.println(test2);
+		//}
+		//for(String test : splitUp) {
+		//	System.out.println(test);
+		//}
 		return null;
 	}
 
@@ -157,14 +175,24 @@ public class Questions {
 	public int[] listGen() {
 		
 		int[] array = {0,0,0,0,0};
+		boolean trace = true;
 		
-		for(int i = 0; i < 5; i++) {
-			
-			array[i] = (int)(Math.random()*10000)*2;
-			//System.out.println(array[i]);
+		
+		for(int i = 0; i < array.length; i++) {
+			double randNum = 0.0;
+		while (trace) {
+			randNum = Math.random();
+			if(randNum > 0.11 && randNum <= 0.2) {
+				trace = false;
+			}
 			
 		}
-		return new int[] {0,0,0,0,0};
+			array[i] = (int)(randNum * 500) * 2;
+			trace = true;
+			System.out.println(array[i]);
+			
+		}
+		return array;
 	}
 
 
