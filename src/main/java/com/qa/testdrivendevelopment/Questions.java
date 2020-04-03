@@ -136,6 +136,8 @@ public class Questions {
 		String[] splitUp = csvInput.split("\n");
 		String[] test1 = splitUp.toString().split(",");
 		
+		System.out.println(splitUp);
+		
 		//System.out.println(test1);
 		
 		//for(String test2: test1) {
@@ -173,7 +175,6 @@ public class Questions {
 		}
 			array[i] = (int)(randNum * 500) * 2;
 			trace = true;
-			System.out.println(array[i]);
 			
 		}
 		return array;
