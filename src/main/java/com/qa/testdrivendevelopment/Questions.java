@@ -1,8 +1,5 @@
 package com.qa.testdrivendevelopment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Questions {
 	/**
 	 * EXAMPLE: THIS ONE HAS BEEN DONE FOR YOU <br>
@@ -112,7 +109,7 @@ public class Questions {
 		}
 		
 
-		return newArray;
+		return null;
 	}
 
 	/**
